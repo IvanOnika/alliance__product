@@ -2,19 +2,32 @@
   position: relative;
   padding: 0px;
   margin: 0 auto;
+  max-width: 480px;
 
   @media screen and(min-width:768px) {
-    background-image: url(../photo/products/background/background-tablet-min.png);
+    background-image: url(../photo/products/background/background-image-tablet-min.png);
     background-repeat: no-repeat;
     background-size: cover;
     padding: 0 32px;
+    max-width: 768px;
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../photo/products/background/background-image-tablet-2x-min.png);
+    }
   }
 
   @media screen and(min-width:1200px) {
-    background-image: url(../photo/products/background/background-desctop-min.png);
+    background-image: url(../photo/products/background/background-image-desctop-min.png);
     background-repeat: no-repeat;
     background-size: cover;
     padding: 0 12px;
+    max-width: 1200px;
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../photo/products/background/background-image-desctop-2x-min.png);
+    }
   }
 }
 
@@ -25,7 +38,7 @@
 }
 
 .products__about {
-  font-family: "Montserrat";
+  font-family: 'Montserrat';
   font-style: normal;
   font-weight: 800;
   font-size: 18px;
@@ -44,12 +57,15 @@
 
   @media screen and(min-width:1200px) {
     transform: none;
-    left: 550px;
+    left: 480px;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 1.23;
   }
 }
 
 .products__title {
-  font-family: "Seymour One";
+  font-family: 'Seymour One';
   font-style: normal;
   font-weight: 400;
   font-size: 30px;
@@ -69,7 +85,10 @@
 
   @media screen and(min-width:1200px) {
     transform: none;
-    left: 485px;
+    left: 435px;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 45px;
   }
 }
 
@@ -94,6 +113,11 @@
 
   @media screen and(min-width:400px) {
     padding: 280px 50px 0px 50px;
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../photo/products/background/background-image-1-mobile-2x-min.png);
+    }
   }
 
   @media screen and(min-width:768px) {
@@ -115,6 +139,11 @@
 
   @media screen and(min-width:400px) {
     padding: 164px 50px 0px 50px;
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../photo/products/background/background-image-2-mobile-2x-min.png);
+    }
   }
 
   @media screen and(min-width:768px) {
@@ -135,7 +164,12 @@
   background-size: cover;
 
   @media screen and(min-width:400px) {
-    padding: 164px 50px 0px 50px;
+    padding: 164px 50px 60px 50px;
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../photo/products/background/background-image-3-mobile-2x-min.png);
+    }
   }
 
   @media screen and(min-width:768px) {
@@ -164,24 +198,10 @@
     position: absolute;
     top: -100px;
     border-radius: 50%;
-    background: linear-gradient(
-        0deg,
-        rgba(156, 190, 143, 0.7),
-        rgba(156, 190, 143, 0.7)
-      ),
-      #d9d9d9;
-    box-shadow: 0px 11.34219px 20.0332px rgba(10, 136, 23, 0.25);
 
     @media screen and(min-width:1200px) {
       content: url(../photo/products/ice-cream-desctop-min.png);
-      top: -150px;
-      background: linear-gradient(
-          0deg,
-          rgba(156, 190, 143, 0.7),
-          rgba(156, 190, 143, 0.7)
-        ),
-        #d9d9d9;
-      box-shadow: 0px 8px 30px rgba(10, 136, 23, 0.25);
+      top: -186px;
     }
   }
 
@@ -213,24 +233,10 @@
     width: auto;
     height: auto;
     border-radius: 50%;
-    background: linear-gradient(
-        0deg,
-        rgba(248, 210, 78, 0.7),
-        rgba(248, 210, 78, 0.7)
-      ),
-      #d9d9d9;
-    box-shadow: 0px 11.40397px 20.2649px rgba(153, 114, 23, 0.25);
 
     @media screen and(min-width:1200px) {
       content: url(../photo/products/ice-coffee-desctop-min.png);
-      top: -150px;
-      background: linear-gradient(
-          0deg,
-          rgba(248, 210, 78, 0.7),
-          rgba(248, 210, 78, 0.7)
-        ),
-        #d9d9d9;
-      box-shadow: 0px 8px 30px rgba(153, 114, 23, 0.25);
+      top: -186px;
     }
   }
 
@@ -259,30 +265,17 @@
   &::before {
     content: url(../photo/products/milkshake-mobile-min.png);
     position: absolute;
-    width: 100%;
+    width: 200px;
+    height: 208px;
     top: -100px;
     display: block;
     width: auto;
     height: auto;
     border-radius: 50%;
-    background: linear-gradient(
-        0deg,
-        rgba(213, 117, 63, 0.7),
-        rgba(213, 117, 63, 0.7)
-      ),
-      #d9d9d9;
-    box-shadow: 0px 11.41333px 20.3px rgba(0, 0, 0, 0.25);
 
     @media screen and(min-width:1200px) {
       content: url(../photo/products/milkshake-desctop-min.png);
-      top: -150px;
-      background: linear-gradient(
-          0deg,
-          rgba(213, 117, 63, 0.7),
-          rgba(213, 117, 63, 0.7)
-        ),
-        #d9d9d9;
-      box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.25);
+      top: -186px;
     }
   }
 
@@ -302,7 +295,7 @@
 }
 
 .products__type {
-  font-family: "Montserrat";
+  font-family: 'Montserrat';
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
@@ -321,7 +314,7 @@
 }
 
 .products__description {
-  font-family: "Montserrat";
+  font-family: 'Montserrat';
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -330,6 +323,15 @@
   letter-spacing: 0.04em;
   color: var(--black-text-color);
   padding: 0px 40px;
+
+  @media screen and(min-width:768px) {
+    padding: 0px 26px;
+  }
+
+  @media screen and(min-width:1200px) {
+    padding: 0;
+    width: 220px;
+  }
 }
 
 .products__modal {
@@ -344,4 +346,16 @@
 
 .products__arrow {
   fill: black;
+}
+
+
+.products__modal:hover,
+.products__modal:focus{
+  transform: scale(1.5);
+  transition: scale 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+
+  &:hover .products__arrow,
+  &:focus .products__arrow{
+    fill: #fff;
+  }
 }
